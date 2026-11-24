@@ -16,15 +16,15 @@ Tool parts chosen: Part 3 (Robot Framework) and Part 4 (Cypress).
 
 Start on QuickPizza signed out. Use a timestamped `Lab Pizza YYYYMMDD-HHMMSS` name, a maximum of 600 calories per slice, Knife as the excluded tool, and the vegetarian option. Use the public demo admin account for step 6.
 
-Manual run reported on 24 November 2026: `Lab Pizza 20261124-202030`, Pizza cutter, 550 calories per slice. The table records the observed results. Steps 1–3 and 5 still need their observations recorded.
+Manual run reported on 24 November 2026: `Lab Pizza 20261124-202030`, Pizza cutter, 550 calories per slice. Six steps passed and step 7 failed.
 
 | Step | Action | Expected result | Manual actual result | Status |
 | --- | --- | --- | --- | --- |
-| 1 | Open the home page | Heading reads “Looking to break out of your pizza routine?” | Pending | Pending |
-| 2 | Turn on Advanced | All four restriction and name fields appear | Pending | Pending |
-| 3 | Enter 600, exclude Knife, select vegetarian and enter the name | All four fields show the chosen values | Pending | Pending |
+| 1 | Open the home page | Heading reads “Looking to break out of your pizza routine?” | The page showed “Looking to break out of your pizza routine?” | Pass |
+| 2 | Turn on Advanced | All four restriction and name fields appear | Max Calories per Slice, Excluded tools, Must be vegetarian and Custom Pizza Name appeared | Pass |
+| 3 | Enter 600, exclude Knife, select vegetarian and enter the name | All four fields show the chosen values | The form showed 600, Knife, the vegetarian checkbox selected and `Lab Pizza 20261124-202030` | Pass |
 | 4 | Click Pizza, Please! | The custom name appears with a tool other than Knife and at most 600 calories per slice | `Lab Pizza 20261124-202030`, Pizza cutter, 550 calories per slice | Pass |
-| 5 | Click Love it! as a guest | The page says “Please log in first.” | Pending | Pending |
+| 5 | Click Love it! as a guest | The page says “Please log in first.” | The page showed “Please log in first.” | Pass |
 | 6 | Open /admin and sign in | “Latest pizza recommendations” appears | “Latest pizza recommendations” appeared with 15 entries | Pass |
 | 7 | Find the exact pizza name in the list | The matching row shows the same tool as step 4 | None of the 15 displayed entries matched `Lab Pizza 20261124-202030` | Fail |
 
